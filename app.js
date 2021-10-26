@@ -45,7 +45,7 @@ const rootQuery = new GraphQLObjectType({
 
 const schema= new GraphQLSchema({query:rootQuery})
 
-app.use('/graphql',graphqlHTTP({
+app.use('/',graphqlHTTP({
      schema,
      graphiql:true 
 }))
@@ -53,5 +53,5 @@ app.use('/graphql',graphqlHTTP({
 const port= process.env.PORT || 3000
 
 app.listen(port,()=>{
-    console.log(`Listening on port ${PORT}`)
+    console.log(`Listening on port ${port}`)
 })
