@@ -75,7 +75,7 @@ const rootQuery = new GraphQLObjectType({
 
 const mutants = new GraphQLObjectType({
     name:'Mutations',
-    description:'This is the Likemutation',
+    description:'This is the List of mutations',
     fields:{
         createBlog:{
             type:blogType,
@@ -90,7 +90,8 @@ const mutants = new GraphQLObjectType({
                 },
                 
                 author:{
-                    type:GraphQLString
+                    type:GraphQLString,
+                    
                 },
                 about:{
                     type:GraphQLString
